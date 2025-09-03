@@ -1,9 +1,10 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import TestingMotion from "../components/TestingMotion.vue";
+import Navbar from "../components/Navbar.vue";
 ---
 
 <MainLayout>
-	<h1>Astro</h1>
-	<TestingMotion client:visible/>
+	<Navbar client:visible/>
+	<p>Morbi elementum porttitor sapien, in finibus diam. Nulla a diam erat. Cras pretium elementum dolor nec luctus. Etiam lacinia nunc ut nisi tincidunt finibus. Maecenas congue faucibus lectus. Aliquam ultrices dignissim lectus. Curabitur ut elit a nisi molestie laoreet. Duis vel euismod urna. Suspendisse lacinia nunc id justo fringilla, et imperdiet dolor placerat. Etiam in commodo quam. In in commodo dolor. Nunc volutpat lectus nec tristique posuere. Cras at ornare odio. Quisque ut tellus id augue elementum ornare. In urna felis, pulvinar vitae pellentesque non, eleifend vel velit. Vivamus suscipit tortor at ex egestas maximus.</p>
 </MainLayout>
