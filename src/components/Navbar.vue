@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { Motion, AnimatePresence } from "motion-v";
 import { ref } from "vue";
+import NavbarLinks from "./NavbarLinks.vue";
 
-const isHovered = ref(false);
+const isHovered = ref(true);
 
 const handleMouseEnter = () => {
   isHovered.value = true;
@@ -29,12 +30,15 @@ const handleMouseLeave = () => {
     </Motion>
     <AnimatePresence>
       <Motion v-if="isHovered" as="div"
-        class="bg-black text-white text-center z-40 px-5 py-2 rounded-lg"
+        class="bg-black text-white text-center z-40 px-3 py-3 rounded-lg flex flex-row gap-2"
         :initial="{ y: -40, width: '256px' }" 
         :animate="{ y: 0, width: '300px'}"
         :transition="{ duration: 0.3, ease: 'easeInOut' }" 
         :exit="{ y: -40, width: '256px'}">
-        <p>Menú secundario</p>
+        <NavbarLinks to="#" text="Inicio" />
+        <NavbarLinks to="#" text="Inicio" />
+        <NavbarLinks to="#" text="Inicio" />
+        <NavbarLinks to="#" text="Inicio" />
       </Motion>
     </AnimatePresence>
   </div>
